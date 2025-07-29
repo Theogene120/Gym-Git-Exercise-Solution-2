@@ -97,17 +97,30 @@ Switched to branch 'dev'
 user@LAPTOP-GQ4K54L5 MINGW64 ~/git-exercises (dev)
 $ git branch test
 
+user@LAPTOP-GQ4K54L5 MINGW64 ~/Git-Exercises (dev)
+$ git push origin test
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote:
+remote: Create a pull request for 'test' on GitHub by visiting:
+remote:      https://github.com/Theogene120/Gym-Git-Exercise-Solution/pull/new/test
+remote:
+To github.com:Theogene120/Gym-Git-Exercise-Solution.git
+ * [new branch]      test -> test
+
 user@LAPTOP-GQ4K54L5 MINGW64 ~/git-exercises (dev)
 $ git branch
 * dev
   main
   test
 
-  
-
 user@LAPTOP-GQ4K54L5 MINGW64 ~/git-exercises (dev)
 $ git branch -d test
 Deleted branch test (was 36de133).
+
+user@LAPTOP-GQ4K54L5 MINGW64 ~/Git-Exercises (dev)
+$ git push origin --delete test
+To github.com:Theogene120/Gym-Git-Exercise-Solution.git
+ - [deleted]         test
 
 user@LAPTOP-GQ4K54L5 MINGW64 ~/git-exercises (dev)
 $ git branch
