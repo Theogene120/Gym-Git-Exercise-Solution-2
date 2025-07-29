@@ -47,7 +47,28 @@ $ git commit -m "The README File Add To Keep Track Of The Bash Code"
 user@LAPTOP-GQ4K54L5 MINGW64 ~/git-exercises (main)
 $ git remote add origin git@github.com:Theogene120/Gym-Git-Exercise-Solution.git
 
+user@LAPTOP-GQ4K54L5 MINGW64 ~/Git-Exercises (main)
+$ git add README.md
 
+user@LAPTOP-GQ4K54L5 MINGW64 ~/Git-Exercises (main)
+$ git commit -m "Some Code Added To README File"
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+user@LAPTOP-GQ4K54L5 MINGW64 ~/Git-Exercises (main)
+$ git push -u origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 816 bytes | 408.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To github.com:Theogene120/Gym-Git-Exercise-Solution.git
+   36de133..d4e3180  main -> main
+branch 'main' set up to track 'origin/main'.
 
 
 user@LAPTOP-GQ4K54L5 MINGW64 ~/git-exercises (main)
