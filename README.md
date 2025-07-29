@@ -74,6 +74,16 @@ branch 'main' set up to track 'origin/main'.
 user@LAPTOP-GQ4K54L5 MINGW64 ~/git-exercises (main)
 $ git branch dev
 
+user@LAPTOP-GQ4K54L5 MINGW64 ~/Git-Exercises (main)
+$ git push origin dev
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote:
+remote: Create a pull request for 'dev' on GitHub by visiting:
+remote:      https://github.com/Theogene120/Gym-Git-Exercise-Solution/pull/new/dev
+remote:
+To github.com:Theogene120/Gym-Git-Exercise-Solution.git
+ * [new branch]      dev -> dev
+
 user@LAPTOP-GQ4K54L5 MINGW64 ~/git-exercises (main)
 $ git branch
   dev
@@ -93,6 +103,8 @@ $ git branch
   main
   test
 
+  
+
 user@LAPTOP-GQ4K54L5 MINGW64 ~/git-exercises (dev)
 $ git branch -d test
 Deleted branch test (was 36de133).
@@ -101,7 +113,8 @@ user@LAPTOP-GQ4K54L5 MINGW64 ~/git-exercises (dev)
 $ git branch
 * dev
   main
-
-
-
 ```
+
+### Exercise 2
+
+```bash
