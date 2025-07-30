@@ -304,4 +304,167 @@ To github.com:Theogene120/Gym-Git-Exercise-Solution.git
 branch 'ft/bundle-2' set up to track 'origin/ft/bundle-2'.
  
  ```
+### Exercise 2
+
+```bash
+
+user@LAPTOP-GQ4K54L5 MINGW64 ~
+$ cd Git-Exercises
+
+user@LAPTOP-GQ4K54L5 MINGW64 ~/Git-Exercises (main)
+$ code .
+
+user@LAPTOP-GQ4K54L5 MINGW64 ~/Git-Exercises (main)
+$ git pull origin
+Already up to date.
+
+user@LAPTOP-GQ4K54L5 MINGW64 ~/Git-Exercises (main)
+$ git branch ft/service-redesign
+
+user@LAPTOP-GQ4K54L5 MINGW64 ~/Git-Exercises (main)
+$ git checkout ft/service-redesign
+Switched to branch 'ft/service-redesign'
+
+user@LAPTOP-GQ4K54L5 MINGW64 ~/Git-Exercises (ft/service-redesign)
+$ git checkout ft/bundle-2
+Switched to branch 'ft/bundle-2'
+Your branch is up to date with 'origin/ft/bundle-2'.
+
+user@LAPTOP-GQ4K54L5 MINGW64 ~/Git-Exercises (ft/service-redesign)
+$ git add services.html
+
+user@LAPTOP-GQ4K54L5 MINGW64 ~/Git-Exercises (ft/service-redesign)
+$ git commit -m "Two Services Added On Service File"
+[ft/service-redesign e2fa7df] Two Services Added On Service File
+ 1 file changed, 2 insertions(+)
+
+user@LAPTOP-GQ4K54L5 MINGW64 ~/Git-Exercises (ft/service-redesign)
+$ git push
+fatal: The current branch ft/service-redesign has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/service-redesign
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+user@LAPTOP-GQ4K54L5 MINGW64 ~/Git-Exercises (ft/service-redesign)
+$ git push --set-upstream origin ft/service-redesign
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 672 bytes | 224.00 KiB/s, done.
+Total 5 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'ft/service-redesign' on GitHub by visiting:
+remote:      https://github.com/Theogene120/Gym-Git-Exercise-Solution/pull/new/ft/service-redesign
+remote:
+To github.com:Theogene120/Gym-Git-Exercise-Solution.git
+ * [new branch]      ft/service-redesign -> ft/service-redesign
+branch 'ft/service-redesign' set up to track 'origin/ft/service-redesign'.
+
+user@LAPTOP-GQ4K54L5 MINGW64 ~/Git-Exercises (ft/service-redesign)
+$ git checkout main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+
+user@LAPTOP-GQ4K54L5 MINGW64 ~/Git-Exercises (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   services.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+user@LAPTOP-GQ4K54L5 MINGW64 ~/Git-Exercises (main)
+$ git add services.html
+
+user@LAPTOP-GQ4K54L5 MINGW64 ~/Git-Exercises (main)
+$ git commit -m "Two Services Add To The Service File"
+[main 8b44e9f] Two Services Add To The Service File
+ 1 file changed, 2 insertions(+)
+
+user@LAPTOP-GQ4K54L5 MINGW64 ~/Git-Exercises (main)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 372 bytes | 372.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To github.com:Theogene120/Gym-Git-Exercise-Solution.git
+   a144c54..8b44e9f  main -> main
+
+user@LAPTOP-GQ4K54L5 MINGW64 ~/Git-Exercises (main)
+$ git checkout ft/service-redesign
+Switched to branch 'ft/service-redesign'
+Your branch is up to date with 'origin/ft/service-redesign'.
+
+user@LAPTOP-GQ4K54L5 MINGW64 ~/Git-Exercises (ft/service-redesign)
+$ git diff main ft/service-redesign
+diff --git a/services.html b/services.html
+index 186e4a4..1b816a8 100644
+--- a/services.html
++++ b/services.html
+@@ -11,8 +11,8 @@
+         <li>Mobile App Development</li>
+         <li>Wev App Development</li>
+         <li>System Development</li>
+-        <li>Electronic Divice Repair</li>
+-        <li>Computer Supply From Dubai</li>
++        <li>Software Development Trainings</li>
++        <li>CCTV Camera Installation And Mentainance</li>
+     </ol>
+ </body>
+ </html>
+
+user@LAPTOP-GQ4K54L5 MINGW64 ~/Git-Exercises (ft/service-redesign)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+user@LAPTOP-GQ4K54L5 MINGW64 ~/Git-Exercises (main)
+$ git merge ft/service-redesign
+Auto-merging services.html
+CONFLICT (content): Merge conflict in services.html
+Automatic merge failed; fix conflicts and then commit the result.
+
+user@LAPTOP-GQ4K54L5 MINGW64 ~/Git-Exercises (main|MERGING)
+$ git add services.html
+
+user@LAPTOP-GQ4K54L5 MINGW64 ~/Git-Exercises (main|MERGING)
+$ git commit -m "Conflict solved"
+[main 920fe56] Conflict solved
+
+user@LAPTOP-GQ4K54L5 MINGW64 ~/Git-Exercises (main)
+$ git push
+Enumerating objects: 1, done.
+Counting objects: 100% (1/1), done.
+Writing objects: 100% (1/1), 221 bytes | 221.00 KiB/s, done.
+Total 1 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To github.com:Theogene120/Gym-Git-Exercise-Solution.git
+   8b44e9f..920fe56  main -> main
+
+user@LAPTOP-GQ4K54L5 MINGW64 ~/Git-Exercises (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+user@LAPTOP-GQ4K54L5 MINGW64 ~/Git-Exercises (main)
+$ git merge ft/service-redesign
+Already up to date.
+
+```
 
