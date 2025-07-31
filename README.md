@@ -788,3 +788,53 @@ To github.com:Theogene120/Gym-Git-Exercise-Solution.git
 branch 'ft/home-page-redesign' set up to track 'origin/ft/home-page-redesign'.
 
 ```
+
+## Bundle-4
+
+### Exercise-1
+
+user@LAPTOP-GQ4K54L5 MINGW64 ~/Git-Exercises (ft/contact-page)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+user@LAPTOP-GQ4K54L5 MINGW64 ~/Git-Exercises (main)
+$ git remote add origin git@github.com:Theogene120/Gym-Git-Exercise-Solution-2.git
+error: remote origin already exists.
+
+user@LAPTOP-GQ4K54L5 MINGW64 ~/Git-Exercises (main)
+$ git remote add git-copy git@github.com:Theogene120/Gym-Git-Exercise-Solution-2.git
+
+user@LAPTOP-GQ4K54L5 MINGW64 ~/Git-Exercises (main)
+$ git add home.html
+
+user@LAPTOP-GQ4K54L5 MINGW64 ~/Git-Exercises (main)
+$ git commit -m "Change Add After Adding New Remote"
+[main f4a89f9] Change Add After Adding New Remote
+ 1 file changed, 1 insertion(+)
+
+user@LAPTOP-GQ4K54L5 MINGW64 ~/Git-Exercises (main)
+$ git push git-copy main
+Enumerating objects: 58, done.
+Counting objects: 100% (58/58), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (57/57), done.
+Writing objects: 100% (58/58), 10.22 KiB | 872.00 KiB/s, done.
+Total 58 (delta 25), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (25/25), done.
+To github.com:Theogene120/Gym-Git-Exercise-Solution-2.git
+ * [new branch]      main -> main
+
+user@LAPTOP-GQ4K54L5 MINGW64 ~/Git-Exercises (main)
+$ git push origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 381 bytes | 381.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To github.com:Theogene120/Gym-Git-Exercise-Solution.git
+   a31c2c5..f4a89f9  main -> main
+
+```
