@@ -793,6 +793,8 @@ branch 'ft/home-page-redesign' set up to track 'origin/ft/home-page-redesign'.
 
 ### Exercise-1
 
+```bash
+
 user@LAPTOP-GQ4K54L5 MINGW64 ~/Git-Exercises (ft/contact-page)
 $ git checkout main
 Switched to branch 'main'
