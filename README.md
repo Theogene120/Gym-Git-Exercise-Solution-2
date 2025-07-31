@@ -693,3 +693,98 @@ To github.com:Theogene120/Gym-Git-Exercise-Solution.git
    9beda4f..4dfb8b9  ft/faq-page -> ft/faq-page
  
  ```
+
+ ### Exercise-2
+
+```bash
+user@LAPTOP-GQ4K54L5 MINGW64 ~/Git-Exercises (main)
+$ git checkout ft/faq-page
+Switched to branch 'ft/faq-page'
+Your branch is up to date with 'origin/ft/faq-page'.
+
+user@LAPTOP-GQ4K54L5 MINGW64 ~/Git-Exercises (ft/faq-page)
+$ git checkout -b ft/home-page-redesign
+Switched to a new branch 'ft/home-page-redesign'
+
+user@LAPTOP-GQ4K54L5 MINGW64 ~/Git-Exercises (ft/home-page-redesign)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+user@LAPTOP-GQ4K54L5 MINGW64 ~/Git-Exercises (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        fro-change-main.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+user@LAPTOP-GQ4K54L5 MINGW64 ~/Git-Exercises (main)
+$ git add fro-change-main.html
+
+user@LAPTOP-GQ4K54L5 MINGW64 ~/Git-Exercises (main)
+$ git commit -m "This file is for making change to main branch"
+[main 2b53e17] This file is for making change to main branch
+ 1 file changed, 11 insertions(+)
+ create mode 100644 fro-change-main.html
+
+user@LAPTOP-GQ4K54L5 MINGW64 ~/Git-Exercises (main)
+$ git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 475 bytes | 475.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To github.com:Theogene120/Gym-Git-Exercise-Solution.git
+   bde19f3..2b53e17  main -> main
+
+user@LAPTOP-GQ4K54L5 MINGW64 ~/Git-Exercises (main)
+$ git checkout ft/home-page-redesign
+Switched to branch 'ft/home-page-redesign'
+
+user@LAPTOP-GQ4K54L5 MINGW64 ~/Git-Exercises (ft/home-page-redesign)
+$ git rebase main
+Successfully rebased and updated refs/heads/ft/home-page-redesign.
+
+user@LAPTOP-GQ4K54L5 MINGW64 ~/Git-Exercises (ft/home-page-redesign)
+$ git add home.html
+
+user@LAPTOP-GQ4K54L5 MINGW64 ~/Git-Exercises (ft/home-page-redesign)
+$ git commit -m 'Some changes made to the home page'
+[ft/home-page-redesign 740cc6c] Some changes made to the home page
+ 1 file changed, 1 insertion(+)
+
+user@LAPTOP-GQ4K54L5 MINGW64 ~/Git-Exercises (ft/home-page-redesign)
+$ git push
+fatal: The current branch ft/home-page-redesign has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/home-page-redesign
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+user@LAPTOP-GQ4K54L5 MINGW64 ~/Git-Exercises (ft/home-page-redesign)
+$ git push --set-upstream origin ft/home-page-redesign
+Enumerating objects: 16, done.
+Counting objects: 100% (16/16), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (14/14), done.
+Writing objects: 100% (14/14), 1.57 KiB | 321.00 KiB/s, done.
+Total 14 (delta 8), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (8/8), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'ft/home-page-redesign' on GitHub by visiting:
+remote:      https://github.com/Theogene120/Gym-Git-Exercise-Solution/pull/new/ft/home-page-redesign
+remote:
+To github.com:Theogene120/Gym-Git-Exercise-Solution.git
+ * [new branch]      ft/home-page-redesign -> ft/home-page-redesign
+branch 'ft/home-page-redesign' set up to track 'origin/ft/home-page-redesign'.
+
+```
