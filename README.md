@@ -840,3 +840,132 @@ To github.com:Theogene120/Gym-Git-Exercise-Solution.git
    a31c2c5..f4a89f9  main -> main
 
 ```
+### Exercise-2
+
+```bash
+user@LAPTOP-GQ4K54L5 MINGW64 ~/Git-Exercises (main)
+$ git checkout -b ft/footer
+Switched to a new branch 'ft/footer'
+
+user@LAPTOP-GQ4K54L5 MINGW64 ~/Git-Exercises (ft/footer)
+$ echo > footer.html
+
+user@LAPTOP-GQ4K54L5 MINGW64 ~/Git-Exercises (ft/footer)
+$ git add footer.html
+warning: in the working copy of 'footer.html', LF will be replaced by CRLF the next time Git touches it
+
+user@LAPTOP-GQ4K54L5 MINGW64 ~/Git-Exercises (ft/footer)
+$ git commit -m "Footer File Added"
+[ft/footer 586be2e] Footer File Added
+ 1 file changed, 11 insertions(+)
+ create mode 100644 footer.html
+
+user@LAPTOP-GQ4K54L5 MINGW64 ~/Git-Exercises (ft/footer)
+$ git status
+On branch ft/footer
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   footer.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+user@LAPTOP-GQ4K54L5 MINGW64 ~/Git-Exercises (ft/footer)
+$ git add footer.html
+warning: in the working copy of 'footer.html', LF will be replaced by CRLF the next time Git touches it
+
+user@LAPTOP-GQ4K54L5 MINGW64 ~/Git-Exercises (ft/footer)
+$ git commit -m "More Changes Added On Footer File"
+[ft/footer 4a8dceb] More Changes Added On Footer File
+ 1 file changed, 1 insertion(+)
+
+user@LAPTOP-GQ4K54L5 MINGW64 ~/Git-Exercises (ft/footer)
+$ git push
+fatal: The current branch ft/footer has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/footer
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+user@LAPTOP-GQ4K54L5 MINGW64 ~/Git-Exercises (ft/footer)
+$ git push --set-upstream origin ft/footer
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 773 bytes | 257.00 KiB/s, done.
+Total 6 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/footer' on GitHub by visiting:
+remote:      https://github.com/Theogene120/Gym-Git-Exercise-Solution/pull/new/ft/footer
+remote:
+To github.com:Theogene120/Gym-Git-Exercise-Solution.git
+ * [new branch]      ft/footer -> ft/footer
+branch 'ft/footer' set up to track 'origin/ft/footer'.
+
+user@LAPTOP-GQ4K54L5 MINGW64 ~/Git-Exercises (ft/footer)
+$ git push --set-upstream git-copy ft/footer
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 773 bytes | 773.00 KiB/s, done.
+Total 6 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/footer' on GitHub by visiting:
+remote:      https://github.com/Theogene120/Gym-Git-Exercise-Solution-2/pull/new/ft/footer
+remote:
+To github.com:Theogene120/Gym-Git-Exercise-Solution-2.git
+ * [new branch]      ft/footer -> ft/footer
+branch 'ft/footer' set up to track 'git-copy/ft/footer'.
+
+user@LAPTOP-GQ4K54L5 MINGW64 ~/Git-Exercises (ft/footer)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+user@LAPTOP-GQ4K54L5 MINGW64 ~/Git-Exercises (main)
+$ git checkout -b ft/squashing
+Switched to a new branch 'ft/squashing'
+
+user@LAPTOP-GQ4K54L5 MINGW64 ~/Git-Exercises (ft/squashing)
+$ git merge --squash ft/footer
+Updating 4326a6d..4a8dceb
+Fast-forward
+Squash commit -- not updating HEAD
+ footer.html | 12 ++++++++++++
+ 1 file changed, 12 insertions(+)
+ create mode 100644 footer.html
+
+user@LAPTOP-GQ4K54L5 MINGW64 ~/Git-Exercises (ft/squashing)
+$ git commit -m "Footer Changes Squashing"
+[ft/squashing 0cb1dc8] Footer Changes Squashing
+ 1 file changed, 12 insertions(+)
+ create mode 100644 footer.html
+
+user@LAPTOP-GQ4K54L5 MINGW64 ~/Git-Exercises (ft/squashing)
+$ git push git-copy main
+Everything up-to-date
+
+user@LAPTOP-GQ4K54L5 MINGW64 ~/Git-Exercises (ft/squashing)
+$ git push git-copy ft/squashing
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 497 bytes | 248.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/squashing' on GitHub by visiting:
+remote:      https://github.com/Theogene120/Gym-Git-Exercise-Solution-2/pull/new/ft/squashing
+remote:
+To github.com:Theogene120/Gym-Git-Exercise-Solution-2.git
+ * [new branch]      ft/squashing -> ft/squashing
+
+```
