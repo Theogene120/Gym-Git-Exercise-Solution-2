@@ -468,3 +468,228 @@ Already up to date.
 
 ```
 
+## Bundle-3
+
+### Exercise-1
+
+```bash
+user@LAPTOP-GQ4K54L5 MINGW64 ~/Git-Exercises (main)
+$ git checkout -b ft/team-page
+Switched to a new branch 'ft/team-page'
+
+user@LAPTOP-GQ4K54L5 MINGW64 ~/Git-Exercises (ft/team-page)
+$ echo team.html
+team.html
+
+user@LAPTOP-GQ4K54L5 MINGW64 ~/Git-Exercises (ft/team-page)
+$ echo > team.html
+
+user@LAPTOP-GQ4K54L5 MINGW64 ~/Git-Exercises (ft/team-page)
+$ git add team.html
+warning: in the working copy of 'team.html', LF will be replaced by CRLF the next time Git touches it
+
+user@LAPTOP-GQ4K54L5 MINGW64 ~/Git-Exercises (ft/team-page)
+$ git commit -m "Instruction to join the team"
+[ft/team-page d224911] Instruction to join the team
+ 1 file changed, 11 insertions(+)
+ create mode 100644 team.html
+
+user@LAPTOP-GQ4K54L5 MINGW64 ~/Git-Exercises (ft/team-page)
+$ git push
+fatal: The current branch ft/team-page has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/team-page
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+user@LAPTOP-GQ4K54L5 MINGW64 ~/Git-Exercises (ft/team-page)
+$ git push --set-upstream origin ft/team-page
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 470 bytes | 235.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/team-page' on GitHub by visiting:
+remote:      https://github.com/Theogene120/Gym-Git-Exercise-Solution/pull/new/ft/team-page
+remote:
+To github.com:Theogene120/Gym-Git-Exercise-Solution.git
+ * [new branch]      ft/team-page -> ft/team-page
+branch 'ft/team-page' set up to track 'origin/ft/team-page'.
+
+user@LAPTOP-GQ4K54L5 MINGW64 ~/Git-Exercises (ft/team-page)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+user@LAPTOP-GQ4K54L5 MINGW64 ~/Git-Exercises (main)
+$ git checkout -b ft/contact-page
+Switched to a new branch 'ft/contact-page'
+
+user@LAPTOP-GQ4K54L5 MINGW64 ~/Git-Exercises (ft/contact-page)
+$ git checkout ft/team-page
+Switched to branch 'ft/team-page'
+Your branch is up to date with 'origin/ft/team-page'.
+
+user@LAPTOP-GQ4K54L5 MINGW64 ~/Git-Exercises (ft/team-page)
+$ git log
+commit d2249119dbc093ff1cc8d8097fc0299f90d3e821 (HEAD -> ft/team-page, origin/ft/team-page)
+Author: Theogene <igiranezatheogene4@gmail.com>
+Date:   Thu Jul 31 11:17:23 2025 +1100
+
+    Instruction to join the team
+
+commit e200ddf21ab8b630935c2d8ec5c44747eac97090 (origin/main, origin/HEAD, main, ft/contact-page)
+Author: Theogene <igiranezatheogene4@gmail.com>
+Date:   Thu Jul 31 09:32:00 2025 +1100
+
+    Solution Of Bundle 2 Exercise 2 Added
+
+commit 920fe56c770897623cfe48195ddc14a7c5e9b221
+Merge: 8b44e9f e2fa7df
+Author: Theogene <igiranezatheogene4@gmail.com>
+Date:   Thu Jul 31 08:51:39 2025 +1100
+
+    Conflict solved
+
+commit 8b44e9fe8e8f354a0d73e79cacd8ceff247a6b49
+Author: Theogene <igiranezatheogene4@gmail.com>
+Date:   Thu Jul 31 08:32:56 2025 +1100
+
+    Two Services Add To The Service File
+
+commit e2fa7dfdd096978eb7b292ec44535e9772a23984 (origin/ft/service-redesign, ft/service-redesign)
+Author: Theogene <igiranezatheogene4@gmail.com>
+Date:   Thu Jul 31 08:23:18 2025 +1100
+
+    Two Services Added On Service File
+
+commit fd0ea9c386b7de7fd5803e056f891c1f7e1742b3
+Merge: a144c54 00d9fdd
+Author: Theogene <igiranezatheogene4@gmail.com>
+Date:   Thu Jul 31 08:11:07 2025 +1100
+
+    I Merge branch 'ft/bundle-2' to main to have service file
+
+user@LAPTOP-GQ4K54L5 MINGW64 ~/Git-Exercises (ft/contact-page)
+$ git cherry-pick d2249119dbc093ff1cc8d8097fc0299f90d3e821
+[ft/contact-page 733d577] Instruction to join the team
+ Date: Thu Jul 31 11:17:23 2025 +1100
+ 1 file changed, 11 insertions(+)
+ create mode 100644 team.html
+
+user@LAPTOP-GQ4K54L5 MINGW64 ~/Git-Exercises (ft/contact-page)
+$ git echo > contact.html
+git: 'echo' is not a git command. See 'git --help'.
+
+The most similar command is
+        fetch
+
+user@LAPTOP-GQ4K54L5 MINGW64 ~/Git-Exercises (ft/contact-page)
+$ git add contact.html
+
+user@LAPTOP-GQ4K54L5 MINGW64 ~/Git-Exercises (ft/contact-page)
+$ git commit -m "Contact page is added"
+[ft/contact-page 3e64832] Contact page is added
+ 1 file changed, 11 insertions(+)
+ create mode 100644 contact.html
+
+user@LAPTOP-GQ4K54L5 MINGW64 ~/Git-Exercises (ft/contact-page)
+$ git push
+fatal: The current branch ft/contact-page has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/contact-page
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+user@LAPTOP-GQ4K54L5 MINGW64 ~/Git-Exercises (ft/contact-page)
+$ git push --set-upstream origin ft/contact-page
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 767 bytes | 191.00 KiB/s, done.
+Total 6 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/contact-page' on GitHub by visiting:
+remote:      https://github.com/Theogene120/Gym-Git-Exercise-Solution/pull/new/ft/contact-page
+remote:
+To github.com:Theogene120/Gym-Git-Exercise-Solution.git
+ * [new branch]      ft/contact-page -> ft/contact-page
+branch 'ft/contact-page' set up to track 'origin/ft/contact-page'.
+
+
+user@LAPTOP-GQ4K54L5 MINGW64 ~/Git-Exercises (ft/contact-page)
+$ git checkout -b ft/faq-page
+Switched to a new branch 'ft/faq-page'
+
+user@LAPTOP-GQ4K54L5 MINGW64 ~/Git-Exercises (ft/faq-page)
+$ echo > faq.html
+
+user@LAPTOP-GQ4K54L5 MINGW64 ~/Git-Exercises (ft/faq-page)
+$ git add faq.html
+warning: in the working copy of 'faq.html', LF will be replaced by CRLF the next time Git touches it
+
+user@LAPTOP-GQ4K54L5 MINGW64 ~/Git-Exercises (ft/faq-page)
+$ git commit -m "faq file added to the project"
+[ft/faq-page 9beda4f] faq file added to the project
+ 1 file changed, 11 insertions(+)
+ create mode 100644 faq.html
+
+user@LAPTOP-GQ4K54L5 MINGW64 ~/Git-Exercises (ft/faq-page)
+$ git push
+fatal: The current branch ft/faq-page has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/faq-page
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+user@LAPTOP-GQ4K54L5 MINGW64 ~/Git-Exercises (ft/faq-page)
+$ git push --set-upstream origin ft/faq-page
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 440 bytes | 440.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/faq-page' on GitHub by visiting:
+remote:      https://github.com/Theogene120/Gym-Git-Exercise-Solution/pull/new/ft/faq-page
+remote:
+To github.com:Theogene120/Gym-Git-Exercise-Solution.git
+ * [new branch]      ft/faq-page -> ft/faq-page
+branch 'ft/faq-page' set up to track 'origin/ft/faq-page'.
+
+
+user@LAPTOP-GQ4K54L5 MINGW64 ~/Git-Exercises (ft/faq-page)
+$ git revert d2249119dbc093ff1cc8d8097fc0299f90d3e821
+[ft/faq-page 4dfb8b9] Revert "Instruction to join the team"
+ 1 file changed, 11 deletions(-)
+ delete mode 100644 team.html
+
+user@LAPTOP-GQ4K54L5 MINGW64 ~/Git-Exercises (ft/faq-page)
+$ git push
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 296 bytes | 296.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To github.com:Theogene120/Gym-Git-Exercise-Solution.git
+   9beda4f..4dfb8b9  ft/faq-page -> ft/faq-page
+ 
+ ```
